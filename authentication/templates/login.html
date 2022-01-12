@@ -25,7 +25,7 @@
 
                 <div class="corpo_sidebar">
                     <div>
-                        <h2 class="titulo cor_branca">Cadastre-se</h2>
+                        <h2 class="titulo cor_branca">Logar</h2>
                     </div>
 
                     <div>
@@ -33,7 +33,7 @@
                         <p style="margin-top:-20px" class="cor_branca descricao">Nos melhores preços</p>
                         <br>
                         <br>
-                        <a class="btn_logar" href="{% url 'login' %}">LOGAR</a>
+                        <a class="btn_logar" href="{% url 'register' %}">CADASTRAR</a>
                     </div>
 
                 </div>
@@ -42,8 +42,8 @@
             <div class="col-md-9">
                 <div class="area_cadastrar">
                 
-                    <form action="{% url 'register' %}" method="POST">{% csrf_token %}
-                        <h2 class="titulo_area_cadastrar">Cadastre-se</h2>
+                    <form action="{% url 'login' %}" method="POST">{% csrf_token %}
+                        <h2 class="titulo_area_cadastrar">Logar</h2>
 
                         {% if messages %}
                             {% for message in messages %}
@@ -57,12 +57,9 @@
                         <input name="username" class="input_cadastrar input_cadastrar_nome" type="text" placeholder="Username...">
                         <br>
                         <br>
-                        <input name="email" class="input_cadastrar input_cadastrar_email" type="text" placeholder="Email...">
-                        <br>
-                        <br>
                         <input name="senha" class="input_cadastrar input_cadastrar_senha" type="password" placeholder="Senha...">
                         <br>
-                        <input class="btn_cadastrar" type="submit" value="Cadastrar">
+                        <input class="btn_cadastrar" type="submit" value="Logar">
                     </form>
                 </div>
 
